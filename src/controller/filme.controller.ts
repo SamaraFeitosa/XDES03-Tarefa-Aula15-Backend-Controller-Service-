@@ -32,6 +32,8 @@ export class FilmeController{
 
     async findAll(req:Request, res:Response)
     {
+        const resp = await filmeService.findAll();
+        res.status(200).json(resp);
 
     }
 
