@@ -4,6 +4,7 @@ import { Router } from "express";
 const router = Router();
 const filmeController = new FilmeController();
 
+// rotas front
 router.post('/', filmeController.create);
 router.delete('/:id', filmeController.delete);
 router.get('/',filmeController.findAll);
