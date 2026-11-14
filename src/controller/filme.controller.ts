@@ -15,6 +15,9 @@ export class FilmeController{
 
     async delete(req: Request, res: Response)
     {
+        const id = Number(req.params.id);
+        await filmeService.delete(id);
+        res.status(200).send();
 
     }
 
