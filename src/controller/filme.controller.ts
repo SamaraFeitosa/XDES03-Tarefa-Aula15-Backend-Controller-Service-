@@ -23,6 +23,10 @@ export class FilmeController{
 
     async update(req:Request, res:Response)
     {
+        const dados = req.body;
+        const id = Number(req.params.id);
+        await filmeService.update(id, dados);
+        res.status(200).send();
 
     }
 
