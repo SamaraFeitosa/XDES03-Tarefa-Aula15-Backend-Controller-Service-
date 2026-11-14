@@ -9,7 +9,7 @@ export class FilmeController{
     {
         const dados = req.body;
         await filmeService.create(dados);
-        res.status(200).send();
+        res.status(200).send();//status 200 é o código de sucesso, e send() envia a resposta para o cliente
 
     }
 
